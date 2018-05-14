@@ -71,11 +71,11 @@ public class BlogController {
 		return "/blog/blog-main";
 	}
 	
-	@RequestMapping(value="/blogAdminBasicModify",method=RequestMethod.GET)
+/*	@RequestMapping(value="/blogAdminBasicModify",method=RequestMethod.GET)
 	public String BlogAdminBasicModify(){
 		
 		
-	}
+	}*/
 	
 	
 	

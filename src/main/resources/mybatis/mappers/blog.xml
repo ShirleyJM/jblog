@@ -22,11 +22,11 @@
 	]]>
 	</select>
 
-	<update id="blogAdminBasicModify" parameterType="com.javaex.vo.BlogVo" resultType="com.javaex.vo.BlogVo">
+	<update id="blogAdminBasicModify" parameterType="com.javaex.vo.BlogVo">
 	<![CDATA[
 		update blog
 		set
-		blogTitle,
+		blogTitle=    ,
 		logoFile
 	]]>
 	
