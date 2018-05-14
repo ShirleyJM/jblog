@@ -23,7 +23,7 @@ public class UserService {
 	
 	@Transactional
     public void join(UserVo userVo){
-    	BlogVo blogVo= new BlogVo(userVo.getId(),userVo.getUserName()+"의 블로그입니다.","default");
+    	BlogVo blogVo= new BlogVo(userVo.getId(),userVo.getUserName()+"의 블로그입니다.","default.jpg");
     	CateVo cateVo= new CateVo(userVo.getId());
     	
 		userDao.insert(userVo);

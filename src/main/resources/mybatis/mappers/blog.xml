@@ -22,13 +22,22 @@
 	]]>
 	</select>
 
-	<update id="blogAdminBasicModify" parameterType="com.javaex.vo.BlogVo">
+	<update id="blogAdminBasicModify" parameterType="map">
 	<![CDATA[
 		update blog
 		set
-		blogTitle=    ,
-		logoFile
-	]]>
+		blogTitle=#{blogTitle}
+		]]>
+		
+		<if test="saveName!=null">
+          <![CDATA[
+           ,logofile=#{saveName}
+          ]]>
+          </if>
+          
+	<![CDATA[	
+		where id=#{id}
+	     ]]>
 	
 	</update>
 </mapper>

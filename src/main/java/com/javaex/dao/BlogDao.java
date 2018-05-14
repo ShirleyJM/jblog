@@ -1,4 +1,5 @@
 package com.javaex.dao;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,4 +25,10 @@ public class BlogDao {
 	public BlogVo blogLogout(String id){
 		return sqlSession.selectOne("blog.select",id);
 	}
+	
+	public void blogAdminBasicModify(Map map){
+		sqlSession.update("blog.blogAdminBasicModify",map);
+	}
+	
+	
 }

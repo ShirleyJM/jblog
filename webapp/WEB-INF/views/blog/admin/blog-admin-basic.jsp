@@ -21,15 +21,15 @@
 			
 			<c:import url="/WEB-INF/views/includes/blogMenu.jsp"></c:import>
 				
-				<form action="${pageContext.request.contextPath}/${blogVo.id}/admin/basic" method="GET">
+				<form action="${pageContext.request.contextPath}/${blogVo.id}/blogAdminBasicModify" method="post" enctype="multipart/form-data">
 	 		      	<table class="admin-config">
 			      		<tr>
 			      			<td class="t">블로그 제목</td>
-			      			<td><input type="text" size="40" name="blogTitle" value=""></td>
+			      			<td><input type="text" size="40" name="blogTitle" value="${blogVo.blogTitle}"></td>
 			      		</tr>
 			      		<tr>
 			      			<td class="t">로고이미지</td>
-			      			<td><img src="${pageContext.request.contextPath}/assets/images/now.jpg"></td>   
+			      			<td><img src="${pageContext.request.contextPath}/upload/${blogVo.logoFile}"></td>   
 			      		</tr>      		
 			      		<tr>
 			      			<td class="t">&nbsp;</td>
